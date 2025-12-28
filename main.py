@@ -26,11 +26,10 @@ def main(args):
   #   verbose = False,
   # )
   print("creating preprocessed_documents.json")
-  # data = encode_data(model, "documents.json")
-
-  # preprocess("preprocessed_documents1.json", data)
-
+  data = encode_data(model, "documents.json")
+  preprocess("preprocessed_documents1.json", data)
   print("created preprocessed_documents.json")
+  
   #preprocessed_documents.json is the 768 one
   index, embeddings, data, id_to_doc = build_index("preprocessed_documents1.json")
   # index, embeddings, data, id_to_doc = build_ivf_index("preprocessed_documents1.json")
